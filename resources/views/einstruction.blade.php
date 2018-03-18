@@ -94,7 +94,8 @@
 													    <ul><li>{{$instruction->instruction}}<li></ul>
 													    	@endforeach
 													   
-													  <form method="POST" action="/exam">
+													  <form method="get" action="/exam">
+
 													   </table>
 												 
                            <input type="checkbox" name="checkbox" required>   <tb><tb><tb>I agree.<br><br>
