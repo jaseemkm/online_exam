@@ -24,7 +24,7 @@ Route::post('/edit_qstn', 'ViewController@edit_qstn_post')->name('edit_qstn_post
 Route::get('/add_instruction', 'ViewController@add_instruction')->name('add_instruction');
 Route::post('/add_instruction', 'ViewController@add_instruction_post')->name('add_instruction_post');
 Route::get('/remove_edit_instruction', 'ViewController@remove_edit_instruction')->name('remove_edit_instruction');
-Route::get('/edit_qstn/{id}', 'ViewController@remove_edit_instruction')->name('remove_edit_instruction');
+Route::get('/edit_qstn/{id}', 'ViewController@edit_qstn')->name('remove_edit_instruction');
 Route::get('/remove_delete_instruction/{id}', 'ViewController@remove_delete_instruction')->name('remove_delete_instruction');
 Route::get('/edit_instruction/{id}', 'ViewController@edit_instruction')->name('edit_instruction');
 Route::post('/edit_instruction', 'ViewController@edit_instruction_post')->name('edit_instruction_post');
