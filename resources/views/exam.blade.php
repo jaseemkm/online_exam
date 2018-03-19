@@ -89,8 +89,8 @@
 										<div class="tab-content-inner active" data-content="signup">
 											<h3>ABC Exam</h3>
 												<div>
-                          
-													
+
+
 							   						<span id="remain"></span>
 									  				<form action="/score" method="post" id="form1" name="form1">
 									  					{{ csrf_field() }}
@@ -115,14 +115,15 @@
 													</script>
 													</body>
 													</html>
-			
-						  <?php $i=1; ?>
+
+						  <?php $i=1;
+							$a=0; ?>
                           <form method="POST" action="/score">
 
                           	{{ csrf_field() }}
 	                       @foreach($questions as $question)
-
-	                       <td><tr>
+<?php $a++ ?>
+	                       <td><tr><?php echo $a ?>
 
 	                       	{{ $question->question }}
 	                       	</tr></td>
@@ -138,14 +139,14 @@
 	                       	<?php $i++; ?>
                            @endforeach
 
-                          
+
                           <br><br>	<div class="row form-group">
     													<div class="col-md-5">
     														<input type="submit" class="btn btn-primary btn-block" value="Submit">
-    													
+
                          </form>
-						
-													 
+
+
 										</div>
 									</div>
 								</div>

@@ -105,71 +105,34 @@
 								<div class="tab">
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<h3>Add Your QUESTIONS</h3>
-											<form action="/add_qstn" method="POST">
+											<h3>Add Student</h3>
+											<form action="/add_student" method="POST">
 												{{ csrf_field() }}
 												<div class="row form-group">
 													<div class="col-md-12">
-														<label for="fullname">Enter your question</label>
-														<input type="text" name="qstn" onfocus="this.value=''" class="form-control">
-													</div>
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="activities">Type of Question</label>
-														<select name="type" class="form-control">
-															<option value="easy">Easy</option>
-															<option value="medium">Medium</option>
-															<option value="hard">Hard</option>
-														</select>
+														<label for="fullname">Student Name</label>
+														<input type="text" name="student_name" onfocus="this.value=''" class="form-control">
 													</div>
 												</div>
                         <div class="row form-group">
-													<div class="col-md-8">
-														<label for="fullname">First Option</label>
-														<input type="text" name="answer1" class="form-control">
-                         </div>
-                          <div class="col-md-4">
-                         Correct answer?<input type="radio" name="canswr" value="1" class="form-control">
-                        </div>
-												</div>
-                        <div class="row form-group">
-                          <div class="col-md-8">
-                            <label for="fullname">Second Option</label>
-                            <input type="text" name="answer2" class="form-control">
-													</div>
-														<div class="col-md-4">Correct Answer?
-                            <input type="radio" name="canswr" value="2" class="form-control">
+                          <div class="col-md-12">
+                            <label for="fullname">Enter a Roll Number</label>
+                            <input type="password" name="rollnumber" onfocus="this.value=''" class="form-control">
                           </div>
                         </div>
                         <div class="row form-group">
-                          <div class="col-md-8">
-                            <label for="fullname">Third Option</label>
-                            <input type="text"name="answer3" class="form-control">
-													</div>
-														<div class="col-md-4">Correct Answer?
-                            <input type="radio" name="canswr" value="3" class="form-control">
+                          <div class="col-md-12">
+                            <label for="fullname">Confirm the Roll Number</label>
+                            <input type="password" name="rollnumber" onfocus="this.value=''" class="form-control">
                           </div>
                         </div>
-                        <div class="row form-group">
-                          <div class="col-md-8">
-                            <label for="fullname">Fourth Option</label>
-                            <input type="text" name="answer4"class="form-control">
-													</div>
-														<div class="col-md-4">Correct Answer?
-                            <input type="radio" name="canswr" value="4" class="form-control">
-                          </div>
-                        </div>
-
-              					
-
 												<div class="row form-group">
 													<div class="col-md-12">
 														<input type="submit" class="btn btn-primary btn-block" value="Add" onclick="myFunction()">
 														<!--popup box-->
 													   	<script>
 														    function myFunction()
-                                 {alert("Question added successfully");}
+                                 {alert("successfully registered");}
                               </script>
 
 													</div>

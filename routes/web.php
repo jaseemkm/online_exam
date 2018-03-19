@@ -18,6 +18,8 @@ Route::get('/admin', 'ViewController@admin')->name('admin');
 Route::get('/add_qstn', 'ViewController@add_qstn')->name('add_qstn');
 Route::post('/add_qstn','ViewController@add_qstn_post')->name('add_qstn');
 Route::get('/remove_edit', 'ViewController@remove_edit')->name('remove_edit');
+Route::get('/add_student', 'ViewController@add_student')->name('add_student');
+Route::post('/add_student', 'ViewController@add_student_post')->name('add_student_post');
 Route::get('/removeq/{id}', 'ViewController@removeq')->name('removeq');
 Route::get('/edit_qstn/{id}', 'ViewController@edit_qstn')->name('edit_qstn');
 Route::post('/edit_qstn', 'ViewController@edit_qstn_post')->name('edit_qstn_post');
@@ -33,6 +35,7 @@ Route::post('/student_login', 'ViewController@student_login')->name('student_log
 Route::get('/einstruction', 'ViewController@einstruction')->name('einstruction');
 Route::get('/exam', 'ViewController@exam')->name('exam');
 Route::post('/score', 'ViewController@score')->name('score');
+
 
 
 

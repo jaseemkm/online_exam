@@ -89,15 +89,14 @@
 										<div class="tab-content-inner active" data-content="signup">
 											<h3>INSTRUCTIONS</h3>
 												<div>
-													
+
 													   @foreach($instructions as $instruction)
 													    <ul><li>{{$instruction->instruction}}<li></ul>
 													    	@endforeach
-													   
-													  <form method="get" action="/exam">
 
+													  <form method="get" action="/exam">
 													   </table>
-												 
+
                            <input type="checkbox" name="checkbox" required>   <tb><tb><tb>I agree.<br><br>
 									     </div>
 												<div class="row form-group">

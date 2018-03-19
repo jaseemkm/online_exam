@@ -54,7 +54,7 @@
     <body>
 
 
-                    
+
     <div class="gtco-loader"></div>
     <div id="page">
     <!-- <div class="page-inner"> -->
@@ -66,9 +66,11 @@
                     <div id="gtco-logo"><a href="/home">HOME <em>.</em></a></div>
                 </div>
 
+
             <div class="col-xs-8 text-right menu-1">
                     <ul>
                         <li><a href="/home">HOME</a></li>
+                          <li><a href="/add_student">Add Student</a></li>
                         <li class="has-dropdown">
                             <a href="#">Manage questions</a>
                             <ul class="dropdown">

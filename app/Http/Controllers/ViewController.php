@@ -12,7 +12,7 @@ class ViewController extends Controller
      *
      * @return void
      */
-    
+
 
     /**
      * Show the application dashboard.
@@ -31,6 +31,19 @@ class ViewController extends Controller
     }
 
 
+    public function add_student()
+    {
+        return view('add_student');
+    }
+    public function add_student_post(Request $student)
+    {
+      $studentname=$student->input('student_name');
+          $rollnumber=$student->input('rollnumber');
+        DB::table('students')->insert(['student_name'=>$studentname,'roll_no'=>$rollnumber]);
+        return redirect('/add_student');
+    }
+
+
     public function remove_edit()
     {
         $details = DB::table('questions')->get();
@@ -45,10 +58,10 @@ class ViewController extends Controller
         return redirect('/remove_edit');
     }
 
-    
+
     public function edit_qstn($id)
     {
-        
+
         $question = DB::table('questions')->where('qstnid',$id)->first();
         $answers = DB::table('answers')->where('qstnid',$id)->get();
 
@@ -59,7 +72,7 @@ class ViewController extends Controller
 
     public function add_instruction()
     {
-        
+
         return view('add_instruction');
     }
 
@@ -82,17 +95,17 @@ class ViewController extends Controller
 
     public function remove_delete_instruction($id)
     {
-        
+
       DB::table('instruction')->where('id',$id)->delete();
       return redirect('/remove_edit_instruction');
 
-                
+
     }
     public function edit_instruction($id)
     {
       $instruction=DB::table('instruction')->where('id',$id)->first();
       return view('edit_instruction',['instruction' => $instruction]);
-                
+
     }
 
     public function edit_instruction_post(Request $details)
@@ -103,16 +116,16 @@ class ViewController extends Controller
     ['instruction' => $instruction]);
 
       return redirect('/remove_edit_instruction');
-          
+
     }
 
     public function type($id)
     {
-        
+
         DB::table('type')->where('id','1')->update(['type' => $id]);
         return redirect('/home');
     }
-    
+
 
     public function edit_qstn_post(Request $details)
     {
@@ -177,21 +190,21 @@ class ViewController extends Controller
     ['qstnid' => $id, 'answers' => $an4,'correct_answer'=>'1']);
             }
 
-        
+
         return redirect('/remove_edit');
 
     }
 
     public function add_qstn_post(Request $details)
     {
-        
+
     $type=$details->input('type');
     $qstn=$details->input('qstn');
     $id=uniqid();
     $answer=$details->input('canswr');
     $an1=$details->input('answer1');
-    $an2=$details->input('answer2');  
-    $an3=$details->input('answer3');  
+    $an2=$details->input('answer2');
+    $an3=$details->input('answer3');
     $an4=$details->input('answer4');
             DB::table('questions')->insert(
     ['qstnid' => $id, 'question' => $qstn,'type'=>$type]);
@@ -293,7 +306,7 @@ class ViewController extends Controller
                 ->groupBy('question_id');
 
             $questions = [
-                
+
             ];
 
             foreach ($query as $question_id => $answers) {
@@ -327,18 +340,14 @@ class ViewController extends Controller
                $myscore=$myscore+1;
              }
 
-            
 
 
-                        
+
+
 
 
             return view('score',['count'=>$count],['myscore'=>$myscore]);
         }
 
-        
+
     }
-
-
-
-    
